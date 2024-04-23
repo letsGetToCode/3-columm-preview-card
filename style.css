@@ -1,0 +1,119 @@
+:root {
+  --clr-orange: hsl(31, 77%, 52%);
+  --clr-light-cyan: hsl(185, 100%,22%);
+  --clr-dark-cyan: hsl(179, 100%, 13%);
+
+  /* paragraphs */
+  --clr-white: hsl(0, 0%, 100%, 0.75); 
+  
+  /*bg, headings, buttons*/
+  --clr-gray: hsl(0, 0%, 95%); 
+
+  --ff-legend-deca: "Lexend Deca", sans-serif;
+  --ff-shoulders-display: "Big Shoulders Display", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-legend-deca);
+}
+
+body { 
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wrapper { 
+  max-width: 912px;
+  display: grid;
+  grid-template-columns: repeat(3, auto); 
+  position: relative;
+  bottom: 0;
+}
+
+.box {
+  padding: 48px 44px;
+  color: var(--clr-white);
+}
+
+.sedan {
+  background-color: var(--clr-orange);
+  border-radius: 8px 0 0 8px;
+  color: var(--clr-orange);
+}
+
+.suv { 
+  background-color: var(--clr-light-cyan);
+  color: var(--clr-light-cyan);
+}
+
+.luxury {
+  background-color: var(--clr-dark-cyan);
+  border-radius: 0 8px 8px 0px;
+  color: var(--clr-dark-cyan);
+}
+
+.box-title {
+  font-family: var(--ff-shoulders-display);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  margin-block: 24px;
+  color: var(--clr-gray);
+  font-size: 2rem;
+}
+
+.box-p {
+  font-weight: var(--regular);
+  color: var(--clr-white);
+  line-height: 24px;
+  margin-bottom: 88px;
+}
+
+button.learn-more {
+  font-weight: var(--fw-regular);
+  border: 2px solid white;
+  background-color: var(--clr-gray);
+  padding: 16px 40px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 48px;  
+}
+
+button.learn-more:hover {
+  cursor:pointer;
+  background-color: transparent;
+  color: var(--clr-gray);
+}
+
+@media screen and (max-width: 710px) {
+
+  body{
+    display: block;
+  }
+
+  .card-wrapper { 
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    margin: 30px;
+  }
+
+  .sedan {
+    border-radius:  8px 8px 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0  8px 8px;
+  }
+
+  button.learn-more {
+    position: static;
+  }
+}
+
