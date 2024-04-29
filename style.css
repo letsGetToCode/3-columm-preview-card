@@ -79,7 +79,7 @@ body {
 button.learn-more {
   font-weight: var(--fw-regular);
   border: 2px solid white;
-  background-color: var(--clr-gray);
+  background-color: white;
   padding: 16px 40px;
   border-radius: 50px;
   position: absolute;
@@ -99,13 +99,18 @@ button.learn-more:hover {
   }
 
   .card-wrapper { 
-    grid-template-columns: 0.5fr 0.5fr;
-    grid-template-rows: 0.5fr 1fr;  
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;  
     margin: 30px;
+    padding-bottom: 30px;
   }
 
   .sedan {
-    border-radius:  8px 8px 0 0;
+    border-radius:  8px 0 0 0;
+  }
+
+  .suv {
+    border-radius: 0 8px 0 0;
   }
 
   .luxury {
@@ -121,6 +126,14 @@ button.learn-more:hover {
 @media screen and (max-width:550px) {
   .card-wrapper {
     grid-template-columns: 1fr;
+  }
+
+  .sedan {
+    border-radius: 8px 8px 0 0 ;
+  }
+
+  .suv {
+    border-radius: 0;
   }
 
   .luxury {
